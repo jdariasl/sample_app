@@ -11,6 +11,7 @@ gem 'rails', '~> 5.1.0'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
+
 group :assets do
   # Use SCSS for stylesheets
   gem 'sass-rails', '~> 5.0'
@@ -57,6 +58,13 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'jquery-rails'
+
+group :test do
+  gem 'rails-controller-testing', '0.1.1'
+  gem 'minitest-reporters'
+  gem 'guard',                    '2.13.0'
+  gem 'guard-minitest',           '2.4.4'
+end
 
 group :production do
   gem 'pg'
